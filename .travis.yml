@@ -3,6 +3,8 @@ language: cpp
 script:
 - cmake -H. -B_build
 - cmake --build _build
+- cd _build
+- ./main
 
 addons:
   apt:
