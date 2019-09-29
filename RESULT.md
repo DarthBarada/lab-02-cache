@@ -1,3 +1,4 @@
+Каждый проход массив заполнялся рандомными числами до 1000
 ```investigation:
         travel_order:front pass
         experiments:
