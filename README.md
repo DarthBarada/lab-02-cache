@@ -77,5 +77,3 @@ investigation:                                       |  investigaion:
 investigation:                                       |  investigation:
 ...                                                  |  ...
 ```
-
-⚠️ В отчет также необходимо добавить общий график с результатами всех исследований. ⚠️
