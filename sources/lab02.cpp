@@ -1,6 +1,4 @@
 // Copyright 2019 Dmitry Mitrofanov <DarthBarada@gmail.com>
-#include "pch.h"
-
 #include "Investigation.h"
 
 
