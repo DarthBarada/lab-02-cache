@@ -97,4 +97,4 @@ investigation:
             input_data:
               buffer_size: "12 mb"
             results:
-              duration: "59973 ms"```
+              duration: "59973 ms"
