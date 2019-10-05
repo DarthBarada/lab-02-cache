@@ -1,5 +1,5 @@
 #pragma once
-#include "Experement.h"
+#include "Experiment.h"
 #include <random>
 #include <string>
 #include <stdexcept>
@@ -83,10 +83,27 @@ void Investigation::FrontPassExperiment()
 				auto begin = std::chrono::high_resolution_clock::now();
 				for (int i = 0; i < 1000; i++)// <- Is this a pass?
 					{
-						for (unsigned int j = 0; j < index->count_of_elements; j++) // <- Is this a pass?
+						if (i % 2 == 0)
 							{
-								index->array[j] = rand() % 1000;
+								for (long int j = 0; j < index->count_of_elements; j++)
+									{
+										index->array[j] = 0;
+									}
 							}
+						else if (i % 3 == 0)
+							{
+								for (long int j = 0; j < index->count_of_elements; j++)
+									{
+										index->array[j] = 2147483647; // 2 147 483 647
+									}
+							}
+						else
+							{
+								for (long int j = 0; j < index->count_of_elements; j++)
+									{
+										index->array[j] = rand() % 1000;
+									}
+							}						
 					}
 				auto end = std::chrono::high_resolution_clock::now();
 				index->work_time = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
@@ -115,10 +132,27 @@ void Investigation::BackPassExperiment()
 				auto begin = std::chrono::high_resolution_clock::now();
 				for (int i = 0; i < 1000; i++)// <- Is this a pass?
 					{
-						for (unsigned int j = index->count_of_elements; j >= 0; j--) // <- Is this a pass?
+						if (i % 2 == 0)
 							{
-								index->array[j] = rand() % 1000;
+								for (long int j = index->count_of_elements-1; j >= 0; j--)
+									{
+										index->array[j] = 0;
+									}
 							}
+						else if (i % 3 == 0)
+							{
+								for (long int j = index->count_of_elements-1; j >= 0; j--)
+									{
+										index->array[j] = 2147483647; // 2 147 483 647
+									}
+							}
+						else
+							{
+								for (long int j = index->count_of_elements-1; j >= 0; j--)
+									{
+										index->array[j] = rand() % 1000;
+									}
+							}					
 					}
 				auto end = std::chrono::high_resolution_clock::now();
 				index->work_time = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
@@ -151,10 +185,27 @@ void Investigation::RandomPassExperiment()
 				auto begin = std::chrono::high_resolution_clock::now();
 				for (int i = 0; i < 1000; i++)// <- Is this a pass?
 					{
-						for (unsigned int j = 0; j < index->count_of_elements; j++) // <- Is this a pass?
+						if (i % 2 == 0)
 							{
-								index->array[dis(gen)] = rand() % 1000;
+								for (long int j = 0; j < index->count_of_elements; j++)
+									{
+										index->array[dis(gen)] = 0;
+									}
 							}
+						else if (i % 3 == 0)
+							{
+								for (long int j = 0; j < index->count_of_elements; j++)
+									{
+										index->array[dis(gen)] = 2147483647; // 2 147 483 647
+									}
+							}
+						else
+							{
+								for (long int j = 0; j < index->count_of_elements; j++)
+									{
+										index->array[dis(gen)] = rand() % 1000;
+									}
+							}	
 					}
 				auto end = std::chrono::high_resolution_clock::now();
 				index->work_time = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
