@@ -1,5 +1,5 @@
 #pragma once
-#include "Experement.h"
+#include "Experiment.h"
 #include <random>
 #include <string>
 #include <stdexcept>
