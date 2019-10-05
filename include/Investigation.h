@@ -115,7 +115,7 @@ void Investigation::BackPassExperiment()
 				auto begin = std::chrono::high_resolution_clock::now();
 				for (int i = 0; i < 1000; i++)// <- Is this a pass?
 					{
-						for (unsigned int j = index->count_of_elements - 1; j >= 0; j--) // <- Is this a pass?
+						for (unsigned int j = index->count_of_elements - 1; j > 0; j--) // <- Is this a pass?
 							{
 								index->array[j] = rand() % 1000;
 							}
