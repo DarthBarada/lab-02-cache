@@ -1,5 +1,4 @@
-Каждый проход массив заполнялся рандомными числами до 1000
-```investigation:
+investigation:
         travel_order:front pass
         experiments:
          - experiment:
@@ -7,31 +6,31 @@
             input_data:
               buffer_size: "1 mb"
             results:
-              duration: "4244 ms"
+              duration: "1468 ms"
          - experiment:
             number: 2
             input_data:
               buffer_size: "2 mb"
             results:
-              duration: "8397 ms"
+              duration: "2945 ms"
          - experiment:
             number: 3
             input_data:
               buffer_size: "4 mb"
             results:
-              duration: "16805 ms"
+              duration: "6071 ms"
          - experiment:
             number: 4
             input_data:
               buffer_size: "8 mb"
             results:
-              duration: "33638 ms"
+              duration: "12120 ms"
          - experiment:
             number: 5
             input_data:
               buffer_size: "12 mb"
             results:
-              duration: "50446 ms"
+              duration: "17615 ms"
 investigation:
         travel_order:reverse pass
         experiments:
@@ -40,31 +39,31 @@ investigation:
             input_data:
               buffer_size: "1 mb"
             results:
-              duration: "4091 ms"
+              duration: "1459 ms"
          - experiment:
             number: 2
             input_data:
               buffer_size: "2 mb"
             results:
-              duration: "8181 ms"
+              duration: "2910 ms"
          - experiment:
             number: 3
             input_data:
               buffer_size: "4 mb"
             results:
-              duration: "16533 ms"
+              duration: "5924 ms"
          - experiment:
             number: 4
             input_data:
               buffer_size: "8 mb"
             results:
-              duration: "32901 ms"
+              duration: "11687 ms"
          - experiment:
             number: 5
             input_data:
               buffer_size: "12 mb"
             results:
-              duration: "49381 ms"
+              duration: "17602 ms"
 investigation:
         travel_order:random pass
         experiments:
@@ -73,28 +72,28 @@ investigation:
             input_data:
               buffer_size: "1 mb"
             results:
-              duration: "4232 ms"
+              duration: "4597 ms"
          - experiment:
             number: 2
             input_data:
               buffer_size: "2 mb"
             results:
-              duration: "8490 ms"
+              duration: "9211 ms"
          - experiment:
             number: 3
             input_data:
               buffer_size: "4 mb"
             results:
-              duration: "17021 ms"
+              duration: "18394 ms"
          - experiment:
             number: 4
             input_data:
               buffer_size: "8 mb"
             results:
-              duration: "33693 ms"
+              duration: "38806 ms"
          - experiment:
             number: 5
             input_data:
               buffer_size: "12 mb"
             results:
-              duration: "50467 ms"
+              duration: "59973 ms"
