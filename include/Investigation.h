@@ -1,5 +1,5 @@
 #pragma once
-#include "Experiment.h"
+#include "Experement.h"
 #include <random>
 #include <string>
 #include <stdexcept>
@@ -115,7 +115,7 @@ void Investigation::BackPassExperiment()
 				auto begin = std::chrono::high_resolution_clock::now();
 				for (int i = 0; i < 1000; i++)// <- Is this a pass?
 					{
-						for (unsigned int j = index->count_of_elements - 1; j > 0; j--) // <- Is this a pass?
+						for (unsigned int j = index->count_of_elements; j >= 0; j--) // <- Is this a pass?
 							{
 								index->array[j] = rand() % 1000;
 							}
@@ -146,7 +146,7 @@ void Investigation::RandomPassExperiment()
 
 				std::random_device rd;		// генерирует равномерно распределенные целые случайные числа
 				std::mt19937 gen(rd());		// двигатель рандомных чисел
-				std::uniform_int_distribution<> dis(0, index->count_of_elements);
+				std::uniform_int_distribution<> dis(0, index->count_of_elements-1);
 				
 				auto begin = std::chrono::high_resolution_clock::now();
 				for (int i = 0; i < 1000; i++)// <- Is this a pass?
