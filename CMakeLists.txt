@@ -5,6 +5,20 @@ project(Cache)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+add_library(
+  ${PROJECT_NAME}
+  PUBLIC
+ ./sources/lab02.cpp
+)
+target_include_directories(
+  include
+  PUBLIC
+  ./include
+)
+add_executable(main ./sources/lab02.cpp)
 
-add_executable(main ${CMAKE_CURRENT_SOURCE_DIR}/sources/lab02.cpp)
+target_link_libraries(
+ ${PROJECT_NAME}
+ PUBLIC
+ include
+)
