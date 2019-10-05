@@ -1,4 +1,5 @@
-```investigation:
+```
+investigation:
         travel_order:front pass
         experiments:
          - experiment:
