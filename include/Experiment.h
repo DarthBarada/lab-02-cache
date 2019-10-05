@@ -30,7 +30,8 @@ class experiment
 						{
 							throw std::runtime_error("Wrong value of cache size mb!"); // if size of array belongs to buffer_sizes ,then programm is throwing an error
 						}
-					count_of_elements = int(mbytes * 512 * 512); // Translate 1 mbytes-> 1024 kbytes -> 1024 * 1024 bytes and devide on 4 bytes - size of 1 int object
+					buffer_size = mbytes;
+					count_of_elements = int(buffer_size * 512 * 512); // Translate 1 mbytes-> 1024 kbytes -> 1024 * 1024 bytes and devide on 4 bytes - size of 1 int object
 					array = new int[count_of_elements]; // Create new array with given size
 				}
 			virtual ~experiment() = default;
